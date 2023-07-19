@@ -1,0 +1,83 @@
+.Banner{
+    &-main{
+        display: flex;
+    >div{
+        flex: 1;
+    }
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        &_title{
+            align-items: center;
+            text-align: center;
+        }
+        &_img{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    @media (max-width:650px) {
+        &_title{
+            .title1{
+                font-size: 40px !important;
+            }
+            .titleimg{
+                gap:10px !important;
+                >div{
+                    max-width: 150px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width:450px) {
+        &_title{
+            .titleimg{
+                flex-direction: column;
+                gap:20px;
+            }
+        }
+    }
+    &_title{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 712px;
+        width: 100%;
+        .title1{
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .title2{
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .titleSign{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            background: red;
+            padding: 10px;
+            color: white;
+            font-weight: 400;
+            font-size: 24px;
+            max-width: 521px;
+            width: 100%;
+        }
+        .title3{
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .titleimg{
+            display: flex;
+            gap: 30px;
+        }
+    }
+    &_img{
+        width: 100%;
+    }
+    }
+}

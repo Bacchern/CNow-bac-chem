@@ -1,0 +1,42 @@
+.Communities{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &_title{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        &_body{
+            display: flex;
+            width: 100%;
+            
+            gap: 10px;
+            .content{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .Join{
+                    border-radius: 10px;
+                    background: #FFFFFF;
+                    max-width: 601px;
+                    width: 100%;
+                    gap: 20px;
+                    .JoinNow{
+                        display: flex;
+                        border-radius: 100px;
+                        background: red;
+                        max-width: 269px;
+                        width: 100%;
+                        padding: 10px;
+                        justify-content: center;
+                        color: white;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

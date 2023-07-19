@@ -1,0 +1,26 @@
+.Trade{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        
+        &_title{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            .shop{
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                @media (max-width:700px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.Sale{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width:480px) {
+            &_title{
+                flex-direction: column ;
+                gap: 10px !important;
+            }
+        }
+        &_title{
+            display: flex;
+            gap: 30px;
+            max-width: 466px;
+            width: 100%;
+            font-size: 14px;
+            align-items: center;
+           
+            .title1{
+                display: flex;
+                align-items: center;
+            }
+            .title2{
+                display: flex;
+                gap:20px;
+            }
+        }
+        &_img{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

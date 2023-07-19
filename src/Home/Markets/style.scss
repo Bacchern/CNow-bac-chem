@@ -1,0 +1,76 @@
+.Markets{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        padding: 5px;
+        &_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1238px;
+            width: 100%;
+        }
+        &_table{
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            background: #FFFFFF;
+            gap: 20px;
+            padding: 10px;
+            max-width: 1238px;
+            width: 100%;
+            
+            .TitleTable{
+                display: flex;
+                justify-content: space-between;
+                >div{
+                    font-size: 16px;
+                    color: #6F74B0;
+                    flex : 1;
+                }
+                gap: 20px;
+            }
+            .DataTable{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                .MapData{
+                    display: flex;
+                    justify-content: space-between;
+                    >div {
+                        flex: 1;
+                    }
+                    .NameData{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        .NameCoin{
+                            font-size: 16px;
+                            color: #B9BDEA;
+                        }
+                    }
+                }
+            }
+        }
+        &_content{
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            .CnowExchange{
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                background: #FFF6F1;
+                // max-width: 290px;
+                width: 290px;
+                align-items: start;
+                padding: 20px;
+            }
+        }
+    }
+}

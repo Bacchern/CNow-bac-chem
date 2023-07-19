@@ -1,0 +1,49 @@
+.header{
+    &-main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        &_menu{
+            display: flex;
+            gap: 10px;
+            .MenuHeader{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .chamtron{
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                }
+                .MapMenu{
+                    display: flex;
+                    color: white;
+                    gap: 2px;
+                    font-size: 12px;
+                    .imgMenu{
+                        display: flex;
+                        align-items: center;
+                    }
+
+                }
+            }
+        }
+        &_log{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .InUp{
+                color: white;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                .SingUp{
+                    border-radius: 15px;
+                    padding: 5px;
+                    background: red;
+                }
+            }
+        }
+    }
+}

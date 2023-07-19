@@ -2,6 +2,12 @@ import "./assets/css/taildwind.css";
 import "./App.css";
 
 import Header from "./components/Header";
+import Banner from "./Home/Banner"
+import Sale from "./Home/Sale"
+import Markets from "./Home/Markets";
+import Services from "./Home/Services"
+import Trade from "./Home/Trade"
+import Communities from "./Home/Communities"
 
 
 
@@ -16,7 +22,13 @@ function App() {
 
   return (
     <>
-      <Header/>
+      {/* <Header/> */}
+      {/* <Banner/> */}
+      {/* <Sale/> */}
+      <Markets/>
+      {/* <Services/> */}
+      {/* <Trade/> */}
+      {/* <Communities/> */}
     </>
   );
 }
