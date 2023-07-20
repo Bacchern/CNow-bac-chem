@@ -8,7 +8,7 @@ import Markets from "./Home/Markets";
 import Services from "./Home/Services"
 import Trade from "./Home/Trade"
 import Communities from "./Home/Communities"
-
+import Footer from "./components/Footer"
 
 
 
@@ -25,10 +25,11 @@ function App() {
       {/* <Header/> */}
       {/* <Banner/> */}
       {/* <Sale/> */}
-      <Markets/>
+      {/* <Markets/> */}
       {/* <Services/> */}
       {/* <Trade/> */}
       {/* <Communities/> */}
+      <Footer/>
     </>
   );
 }

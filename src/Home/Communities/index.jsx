@@ -31,23 +31,23 @@ export default function Communities() {
                         <div className="content">
                             <div className="Join">
                                 <div>
-                                    <div style={{ fontSize: "24px" }}>Communities</div>
+                                    <div style={{ fontSize: "24px", fontWeight:"500" }}>Communities</div>
                                     <div>We support up to 12 languages  with official communities.</div>
                                 </div>
                                 <div className="JoinNow">Join Now</div>
                             </div>
                             <div className="Support">
-                                <div>Customer Service</div>
+                                <div style={{ fontSize: "24px", fontWeight:"500" }}>Customer Service</div>
                                 <div>Ask us anything support@cnow.com</div>
                             </div>
                         </div>
                         <div className="Farvou">
-                            <div className="Star">
+                            <div className="StarText">
                                 {ListCom.map((e, id) => {
                                     return (
-                                        <div key={id}>
+                                        <div className="StarRed" key={id}>
                                             <img src={StarRed} alt="" />
-                                            <div>{e.name}</div>
+                                            <div style={{ fontSize: "24px", fontWeight:"400" }}>{e.name}</div>
                                         </div>
                                     )
                                 })}

@@ -170,7 +170,7 @@ export default function Markets() {
                                         <div>{e.LastPrice}</div>
                                         <div>{e.Change}</div>
                                         <div>{e.MarketCap}</div>
-                                        <div><img src={e.Chart} alt="" /></div>
+                                        <div style={{display:"flex", justifyContent:"center"}}><img src={e.Chart} alt="" /></div>
                                     </div>
                                 )
                             })}
