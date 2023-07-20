@@ -22,14 +22,14 @@ function App() {
 
   return (
     <>
-      {/* <Header/> */}
+      <Header/>
       {/* <Banner/> */}
       {/* <Sale/> */}
       {/* <Markets/> */}
       {/* <Services/> */}
       {/* <Trade/> */}
       {/* <Communities/> */}
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
