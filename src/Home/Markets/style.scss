@@ -18,10 +18,19 @@
             border-radius: 12px;
             background: #FFFFFF;
             gap: 20px;
-            padding: 10px;
+            padding-left: 30px;
             max-width: 1238px;
             width: 100%;
-            
+            @media (max-width:850px) {
+                max-width: 950px;
+                overflow: auto;
+                .TitleTable{
+                    width: 950px;
+                }
+                .DataTable{
+                    width: 950px;
+                }
+            }
             .TitleTable{
                 display: flex;
                 text-align: center;
@@ -49,9 +58,7 @@
                         align-items: center;
                         gap: 10px;
                         
-                        @media (max-width:800px) {
-                            flex-direction: column;
-                        }
+                        
                         .NameCoin{
                             font-size: 16px;
                             color: #B9BDEA;
