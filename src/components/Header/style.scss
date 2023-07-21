@@ -3,47 +3,113 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 5px;
+        position: relative;
+
         &_menu{
             display: flex;
             gap: 10px;
+            align-items: center;
             .MenuHeader{
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                @media (max-width:991px) {
+                    flex-direction: column;
+                }
                 .chamtron{
-                    display: flex;
-                    align-items: center;
-                    gap: 2px;
+                    display: none;
+                    
+                    @media (max-width:991px) {
+                        display: block;
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
+                    }
                 }
                 .MapMenu{
                     display: flex;
                     color: white;
                     gap: 2px;
                     font-size: 12px;
+                    // display: none;
+                    @media (max-width:991px) {
+                        display: none;
+                    }
                     .imgMenu{
                         display: flex;
                         align-items: center;
                     }
 
                 }
+                
             }
         }
         &_log{
             display: flex;
             gap: 10px;
             align-items: center;
+            @media (max-width:700px) {
+                flex-direction: column-reverse;
+                .iconheader{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
             .InUp{
                 color: white;
                 display: flex;
                 gap: 10px;
                 align-items: center;
+                @media (max-width:500px) {
+                    .LogIn{
+                        padding: 5px 10px !important;
+                    }
+                    .SignUp{
+                        padding: 5px 10px !important;
+                    }
+                }
+                .LogIn{
+                    border: 1px solid white;
+                    border-radius: 20px;
+                    justify-content: center;
+                    padding: 5px 15px;
+                }
                 .SingUp{
-                    border-radius: 15px;
-                    padding: 5px;
+                    border-radius: 20px;
+                    padding: 5px 15px;
                     background: red;
+                    justify-content: center;
                 }
             }
+            .iconheader{
+                display: flex;
+                gap: 5px;
+            }
+        }
+    }
+    
+}
+.MapMobile{
+    display: none;
+    
+    @media (max-width:991px) {
+        background: #232531;
+        // display: block;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        max-width: 200px;
+        width: 100%;
+        padding-left: 30px;
+        transition: all 0.5s;
+        position: fixed;
+        z-index: 9;
+        .MenuMoblie{
+            display: flex;
+            gap: 10px;
+            align-items: center;
         }
     }
 }

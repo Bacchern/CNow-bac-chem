@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./style.scss"
 import LogoCnow from "@src/assets/img/LogoCnow.png"
 import Chamhoi from "@src/assets/img/Chamhoi.png"
@@ -78,52 +78,85 @@ const Icon = [
 
 
 
+
+
 export default function Header() {
+
+
+  const [open, setOpen] = useState(false)
+  const onOpen = () => {
+    setOpen(!open)
+  }
+
+  console.log(open);
   return (
-    <div className='header' style={{ background: "black" }} >
-      <div className='container'>
-        <div className='header-main'>
-          <div className='header-main_menu'>
-            <div >
-              <img src={LogoCnow} alt="" />
-            </div>
-            <div className='MenuHeader'>
-              <div className='chamtron' >
-                <div>
-                  <img src={Chamtron} alt="" />
-                </div>
-                <div>
-                  <img src={VectorDown} alt="" />
-                </div>
+    <>
+      <div className='header' style={{ background: "#232531" }} >
+        <div className='container'>
+          <div className='header-main'>
+            <div className='header-main_menu'>
+              <div >
+                <img src={LogoCnow} alt="" />
               </div>
-              {ListHeader.map((e) => {
-                return (
-                  <div className='MapMenu' >
-                    <div>{e.name}</div>
-                    <div className='imgMenu'><img src={VectorUp} alt="" /></div>
+              <div className='MenuHeader'>
+                <div onClick={onOpen} className='chamtron' >
+                  <div>
+                    <img src={Chamtron} alt="" />
                   </div>
-                )
-              })}
+                  <div>
+                    <img src={VectorDown} alt="" />
+                  </div>
+                </div>
+                {ListHeader.map((e, i) => {
+                  return (
+                    <div className='MapMenu' key={i} >
+                      <div>{e.name}</div>
+                      {/* <div className='imgMenu'><img src={VectorUp} alt="" /></div> */}
+                    </div>
+                  )
+                })}
+
+              </div>
             </div>
-          </div>
-          <div className='header-main_log'>
-            <div className='InUp'>
-              <div>Log in</div>
-              <div className='SingUp'>Sign up</div>
-            </div>
-            
-              {Icon.map((e) => {
+            <div className='header-main_log'>
+              <div className='InUp'>
+                <div className='LogIn'>Log in</div>
+                <div className='SingUp'>Sign up</div>
+              </div>
+              <div className='iconheader'>
+              {Icon.map((e, i) => {
                 return (
-                  <div className='iconheader'>
+                  <div className='mapicon' key={i}>
                     <img src={e.img} alt="" />
                   </div>
-                  
+
                 )
               })}
-            
+              </div>
+              
+
+            </div>
+
           </div>
+
         </div>
       </div>
-    </div>
+      <div className={`MapMobile ${open && 'active'}`} style={{ height: `${open ? '226px' : '0'}` }}>
+        {open && 
+        <div>
+        {ListHeader.map((e, i) => {
+          return (
+            <div className='MenuMoblie' key={i} >
+              <div>⊛</div>
+              <div>{e.name}</div>
+              {/* <div className='imgMenu'><img src={VectorUp} alt="" /></div> */}
+            </div>
+          )
+        })}
+        </div> || ""}
+      </div>
+    </>
+
+
   )
 }

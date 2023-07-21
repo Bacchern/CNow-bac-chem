@@ -17,7 +17,7 @@ export default function Sale() {
                         <div className="title2">
                             <div>02 /2023</div>
                             <div>|</div>
-                            <div>More</div>
+                            <div style={{color:"red"}}>More</div>
                         </div>
                     </div>
                     <div className="Sale-main_img">
