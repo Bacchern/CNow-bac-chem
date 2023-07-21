@@ -41,6 +41,9 @@
                         justify-content: center;
                         color: white;
                         font-size: 24px;
+                        @media (max-width:778px) {
+                            margin: auto;
+                        }
                     }
                 }
                 .Support{
