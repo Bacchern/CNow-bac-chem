@@ -2,7 +2,7 @@
     &-main{
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        padding: 10px 0;
         &_title{
             display: flex;
             gap: 10px;
@@ -66,6 +66,7 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 10px;
+            text-align: center;
             @media (max-width:778px) {
                 >div{
                     font-size: 13px !important;
