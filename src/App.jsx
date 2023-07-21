@@ -9,7 +9,7 @@ import Services from "./Home/Services"
 import Trade from "./Home/Trade"
 import Communities from "./Home/Communities"
 import Footer from "./components/Footer"
-
+import SignUp from "./Register/SignUp"
 
 
 const attri = {
@@ -22,14 +22,16 @@ function App() {
 
   return (
     <>
-      <Header/>
+      {/* <Header/>
        <Banner/>
       <Sale/>
       <Markets/>
       <Services/>
       <Trade/>
       <Communities/>
-      <Footer/> 
+      <Footer/>  */}
+
+      <SignUp/>
     </>
   );
 }
