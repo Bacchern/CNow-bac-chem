@@ -1,0 +1,103 @@
+.LoginE{
+    &-main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 10px;
+        &_table{
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px ;
+            background: white;
+            padding: 20px;
+            gap:20px;
+            max-width: 557px;
+            width: 100%;
+            .menu{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .mapcontact{
+                    display: flex;
+                    gap: 10px;
+                    .contact{
+                        border-radius: 100px;
+                        background: linear-gradient(265.56deg, #F5F5F5 -0.27%, #FFFFFF -0.26%, #F5F5F5 98.59%);
+                        padding: 10px 30px;
+                    }
+                }
+                .inputemail{
+                    display: flex;
+                    border-radius: 100px;
+                    border: 1px solid #DFDFDF;
+                    padding: 20px 32px;
+                }
+                .NhapPass{
+                    display: flex;
+                    flex-direction: column;
+                    .forgot{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .inputPass{
+                        display: flex;
+                        border-radius: 100px;
+                        border: 1px solid #DFDFDF;
+                        padding: 20px 32px;
+                    }
+                }
+                .button{
+                    display: flex;
+                    border-radius: 100px ;
+                    background: red;
+                    color: white;
+                    font-size: 18px;
+                    padding: 18px 32px;
+                    justify-content: center;
+                }
+                .OTP{
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    >div{
+                        color: #246CF9;
+                        font-size: 14px;
+                    }
+                }
+                .or{
+                    display: flex;
+                    justify-content: center;
+                    font-size: 22px;
+                }
+                
+            }
+            .continue{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .with{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .app{
+                        display: flex;
+                        gap: 10px;
+                        border-radius: 100px;
+                        background: #2F3241;
+                        justify-content: center;
+                        padding: 20px 32px;
+                        color: white;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        &_QR{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}

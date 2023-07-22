@@ -1,0 +1,60 @@
+.Reset{
+    &-main{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        &_table{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 20px;
+            background: white;
+            padding: 20px;
+            max-width: 557px;
+            height: 600px;
+            width: 100%;
+            .ping{
+                display: flex;
+                gap: 5px;
+                max-width: 487px;
+                width: 100%;
+                border-radius: 12px;
+                background: #EC26240D;
+                padding: 10px;
+                border: 1px solid red;
+                font-size: 14px;
+                .img{
+                    padding-top: 5px;
+                }
+            }
+            .contact{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .titlecontact{
+                    display: flex;
+                    gap: 10px;
+                    .namecontact{
+                        border-radius: 100px;
+                        background:  linear-gradient(265.56deg, #F5F5F5 -0.27%, #FFFFFF -0.26%, #F5F5F5 98.59%);
+                        padding: 10px 30px;
+                    }
+                }
+                .input{
+                    border: 1px solid #DFDFDF;
+                    border-radius: 100px;
+                    padding: 18px 32px;
+                }
+            }
+            .login{
+                display: flex;
+                border-radius: 100px;
+                background: red;
+                font-size: 18px;
+                color: white;
+                padding: 18px 32px;
+                justify-content: center;
+            }
+        }
+    }
+}
