@@ -5,6 +5,9 @@
         justify-content: center;
         gap: 50px;
         padding: 10px;
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
         &_table{
             display: flex;
             flex-direction: column;
