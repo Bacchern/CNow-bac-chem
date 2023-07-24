@@ -1,0 +1,231 @@
+.deposit{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        @media (max-width: 700px) {
+            padding: 10px;
+        }
+        &_title{
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 700px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .menutitle{
+                display: flex;
+                border: 1px solid #DFDFDF;
+                gap: 10px;
+                max-width: 368px;
+                width: 100%;
+                padding: 10px;
+                gap: 16px;
+                border-radius: 10px;
+                justify-content:space-evenly;
+                >div{
+                    font-size: 16px;
+                }
+            }
+            .check{
+                display: flex;
+                gap: 30px; 
+                .hisF{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                } 
+            }
+        }
+        &_content{
+            display: flex;
+            justify-content: center;
+            background: #F7F9FB;
+            padding: 20px;
+            @media (max-width:700px) {
+                padding: 10px;
+            }
+            .table{
+                display: flex;
+                flex-direction: column;
+                max-width: 516px;
+                width: 100%;
+                padding: 20px;
+                background: white;
+                gap: 20px;
+                border-radius: 20px;
+                @media (max-width: 700px) {
+                    padding: 10px;
+                }
+                &-title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #34384C;
+                    padding: 10px;
+                    >div{
+                        display: flex;
+                        gap: 20px;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+                &-menu{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                        &_BTC{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-radius: 10px;
+                        border: 1px solid #DFDFDF;
+                        padding: 10px;
+                        >div{
+                            display: flex;
+                            align-items: center;
+                            
+                        }
+                    }
+                    &_text{
+                        display: flex;
+                        justify-content: space-between;
+                        >div{
+                            font-size: 16px;
+                        }
+                        align-items: center;
+                        @media (max-width: 600px) {
+                            >div{
+                                font-size: 14px;
+                            }
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                        
+                        .address{
+                            display: flex;
+                            max-width: 290px;
+                            width: 100%;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            
+                            .new{
+                                border-radius: 5px;
+                                background:  linear-gradient(265.56deg, #F5F5F5 -0.27%, #EEEEEE -0.26%, #F5F5F5 98.59%);
+                                padding: 18px 32px;
+                                @media (max-width: 600px) {
+                                    padding: 5px 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-network{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .titlenetwork{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        >div{
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                    }
+                    .Bep20{
+                        display: flex;
+                        border: 1px solid #DFDFDF;
+                        border-radius: 10px;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 20px 32px;
+                        @media (max-width: 700px) {
+                            padding: 7px 19px ;
+                        }
+                    }
+                    .search{
+                        display: flex;
+                        flex-direction: column;
+                        border: 1px solid #DFDFDF;
+                        border-radius: 10px;
+                        gap: 20px;
+                        padding: 10px 15px;
+                        .inputseach{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border: 1px solid #DFDFDF;
+                            border-radius: 10px;
+                            padding: 20px 32px;
+                            @media (max-width: 700px) {
+                                padding: 7px 19px ;
+                                >img{
+                                    width: 20px;
+                                }
+                            }
+                        }
+                        .mapsearch{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            >div{
+                                font-size: 16px;
+                            }
+                            @media (max-width:700px) {
+                                >div{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .mini{
+                        display: flex;
+                        justify-content: space-between;
+                        >div{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &-button{
+                    display: flex;
+                    gap: 30px;
+                    justify-content: center;
+                    @media (max-width: 700px) {
+                        gap: 15px;
+                        
+                    }
+                    .copy{
+                        display: flex;
+                        border-radius: 100px;
+                        border: 1px solid #DFDFDF;
+                        padding: 18px 32px;
+                        color: white;
+                        background: red;
+                        @media (max-width: 700px) {
+                            padding: 10px 20px ;
+                            font-size: 14px;
+                            align-items: center;
+                            text-align: center;
+                        }
+                    }
+                    .save{
+                        display: flex;
+                        border-radius: 100px;
+                        border: 1px solid #DFDFDF;
+                        padding: 18px 32px;
+                        font-weight: 500;
+                        @media (max-width: 700px) {
+                            padding: 10px 20px ;
+                            font-size: 14px;
+                            align-items: center;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

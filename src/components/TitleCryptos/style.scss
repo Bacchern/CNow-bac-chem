@@ -1,0 +1,24 @@
+.TitleCryptos{
+    &-main{
+        display: flex;
+        justify-content: center;
+        height: 107px;
+        &-text{
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            .his{
+                display: flex;
+                gap: 30px;
+                .noti{
+                    display: flex;
+                    gap: 5px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

@@ -13,6 +13,14 @@ import SignUp from "./Register/SignUp"
 import Email from "./Register/Email"
 import ResetLogin from "./Login/ResetLogin"
 import CNowLogin from "./Login/CNowLogin"
+import WalletOverveiw from "./WalletOverveiw"
+import MKOverveiw from "./MKOverveiw"
+import SellCrypto from "./SellCrypto"
+import TitleCryptos from "./components/TitleCryptos"
+import BuyCrypto from "./BuyCrypto"
+import Deposit from "./Deposit"
+
+
 const attri = {
   background:'red',
   color:'black'
@@ -23,19 +31,25 @@ function App() {
 
   return (
     <>
-      {/* <Header/>
-       <Banner/>
-      <Sale/>
-      <Markets/>
-      <Services/>
-      <Trade/>
-      <Communities/>
-      <Footer/>  */}
+      {/* <Header/> */}
+       {/* <Banner/> */}
+      {/* <Sale/> */}
+       {/* <Markets/> */}
+      {/* <Services/> */}
+      {/* <Trade/> */}
+      {/* <Communities/> */}
+      {/* <Footer/>  */}
 
       {/* <SignUp/> */}
       {/* <Email/> */}
       {/* <ResetLogin/> */}
-      <CNowLogin/>
+      {/* <CNowLogin/> */}
+      {/* <WalletOverveiw/> */}
+      {/* <MKOverveiw/> */}
+      {/* <SellCrypto/> */}
+      {/* <TitleCryptos/> */}
+      {/* <BuyCrypto/> */}
+      <Deposit/>
     </>
   );
 }
