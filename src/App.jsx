@@ -19,6 +19,7 @@ import SellCrypto from "./SellCrypto"
 import TitleCryptos from "./components/TitleCryptos"
 import BuyCrypto from "./BuyCrypto"
 import Deposit from "./Deposit"
+import Swap from "./Swap"
 
 
 const attri = {
@@ -49,7 +50,8 @@ function App() {
       {/* <SellCrypto/> */}
       {/* <TitleCryptos/> */}
       {/* <BuyCrypto/> */}
-      <Deposit/>
+      {/* <Deposit/> */}
+      <Swap/>
     </>
   );
 }

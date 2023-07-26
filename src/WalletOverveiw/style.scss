@@ -26,7 +26,6 @@
             width: 100%;
             @media (max-width:1100px) {
                 overflow: auto;
-                min-width: 1100px;
             }
             .table{
                 display: flex;
@@ -38,7 +37,10 @@
                 padding: 10px;
                 max-width: 1341px;
                 width: 100%;
-                
+                @media (max-width:1100px) {
+                    min-width: 1000px;
+                    overflow: auto;
+                }
                 &-title{
                     display: flex;
                     border-bottom: 1px solid #DFDFDF;
@@ -48,6 +50,9 @@
                         flex: 1;
                         font-size: 16px;
                         color: #848484;
+                        @media (max-width: 1100px) {
+                            font-size: 14px;
+                        }
                     }
                 }
                 &-data{
@@ -64,13 +69,16 @@
                         >div{
                             flex: 1;
                             font-size: 16px;
+                            @media (max-width: 1100px) {
+                                font-size: 14px;
+                            }
                         }
                         .dataimg{
                             display: flex;
                             gap: 10px;
-                            >img{
-                                max-width: none;
-                            }
+                            // >img{
+                            //     max-width: none;
+                            // }
                             // max-width: 240px;
                             // width: 100%;
                         }

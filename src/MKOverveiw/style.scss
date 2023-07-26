@@ -1,0 +1,154 @@
+.Overveiw{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &_infor{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+            .title{
+                display: flex;
+                flex-direction: column;
+                .price{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .VND{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        border: 1px solid #E8E8E8;
+                        border-radius: 100px;
+                        padding: 5px;
+                        max-width: 79px;
+                        width: 100%;
+                        justify-content: center;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .listinfor{
+                display: flex;
+                width: 100%;
+                // justify-content: space-between;
+                gap: 30px;
+                @media (max-width:1100px) {
+                    flex-wrap: wrap;
+                    max-width: 700px;
+                    margin: auto;
+                    justify-content: center;
+                }
+                .datainfor{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    border-radius: 12px;
+                    background: #F7F9FB;
+                    padding: 10px;
+                    max-width: 325px;
+                    width: 100%;
+                    .mapdatacoin{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .datacoin{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+        &_content{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px;
+            .menu{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &-text{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    >div{
+                        font-size: 14px;
+                    }
+                }
+                &-input{
+                    display: flex;
+                    justify-content: space-between;
+                    border: 1px solid #DFDFDF;
+                    border-radius: 100px;
+                    padding: 20px 32px;
+                    background: white;
+                    max-width: 387px;
+                    width: 100%;
+                }
+            }
+            .table{
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                background: white;
+                padding: 10px;
+                overflow: auto;
+                &-title{
+                    display: flex;
+                    text-align: center;
+                    border-bottom: 1px solid #DFDFDF;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    @media (max-width:1100px) {
+                        min-width: 1300px;
+                    }
+                    >div{
+                        font-size: 16px;
+                        color: #848484;
+                        flex: 1;
+                        padding-left: 40px;
+                    }
+                }
+                &-banner{
+                    display: flex;
+                    flex-direction: column;
+                    @media (max-width:1100px) {
+                        min-width: 1300px;
+                    }
+                    .mapbanner{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #DFDFDF ;
+                        gap: 15px;
+                        .child{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            >div{
+                                flex: 1;
+                                display: flex;
+                                text-align: center;
+                                font-size: 16px;
+                                justify-content: center;
+                            }
+                            .logo{
+                                display: flex;
+                                gap: 6px;
+                                align-items: center;
+                                justify-content: flex-start;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.swap{
+    &-main{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .table{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            max-width: 624px;
+            &-main{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                width: 100%;
+                &_title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    .his{
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        @media (max-width: 500px) {
+                            flex-direction: column-reverse;
+                        }
+                        .tran{
+                            display: flex;
+                            font-size: 14px;
+                            font-weight: 500;
+                            border-radius: 5px;
+                            border: 1px solid #E8E8E8;
+                            padding: 5px 15px;
+                        }
+                    }
+                }
+                &_content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 100%;
+                    .wallet{
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+                        border-radius: 10px;
+                        border: 1px;
+                        background: #F7F9FB;
+                        padding: 15px;
+                        font-size: 16px;
+                    }
+                    .BTC{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        &-main{
+                            display: flex;
+                            justify-content: space-between;
+                            @media (max-width:680px) {
+                                gap: 20px;
+                                justify-content: none;
+                            }
+                            &_input{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                border-radius: 100px;
+                                border: 1px solid #DFDFDF;
+                                padding: 5px;
+                                max-width: 382px;
+                                width: 100%;
+                                font-size: 18px;
+                                :first-child{
+                                    padding-left: 27px;
+                                    @media (max-width: 500px) {
+                                        padding-left: 15px;
+                                    }
+                                }
+                                
+                                .max{
+                                    display: flex;
+                                    border-radius: 100px;
+                                    background:  linear-gradient(265.56deg, #F5F5F5 -0.27%, #F5F5F5 -0.26%, #F5F5F5 98.59%);
+                                    padding: 15px 32px;
+                                    font-weight: bold;
+                                    @media (max-width:500px) {
+                                        padding: 8px 20px;
+                                    }
+                                }
+                            }
+                            &_img{
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                border-radius: 100px;
+                                border: 1px solid #DFDFDF;
+                                padding: 10px 32px;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                    .imgswap{
+                        display: flex;
+                        justify-content: center;
+                        .swapswap{
+                            display: flex;
+                            background: linear-gradient(265.56deg, #246CF9 -0.27%, #848484 -0.26%, #232531 98.59%);
+                            border-radius: 100px;
+                            max-width: 53px;
+                            width: 100%;
+                            height: 53px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                    .USDT{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        &-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            font-size: 18px;
+                            @media (max-width:680px) {
+                                gap: 20px;
+                            }
+                            &_num{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                border-radius: 100px;
+                                border: 1px solid #DFDFDF;
+                                padding: 20px 32px;
+                                max-width: 382px;
+                                width: 100%;
+                                font-size: 18px;
+                                @media (max-width:500px) {
+                                    padding: 13px 20px;
+                                }
+                            }
+                            &_img{
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                border-radius: 100px;
+                                border: 1px solid #DFDFDF;
+                                padding: 18px 32px;
+                                justify-content: center;
+                                @media (max-width:500px) {
+                                    padding: 12px 32px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &_note{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .rate{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        font-size: 16px;
+                        >div{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            >div{
+                                display: flex;
+                                gap: 10px;
+                            }
+                        }
+                    }
+                    .Esti{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        font-size: 16px;
+                        >div{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+            &-button{
+                display: flex;
+                border-radius: 100px;
+                background: red;
+                font-size: 18px;
+                color: white;
+                padding: 18px 32px;
+                justify-content: center;
+                max-width: 525px;
+                width: 100%;
+                margin: auto;
+            }
+        }
+    }
+}

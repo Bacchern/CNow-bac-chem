@@ -23,11 +23,11 @@ import VectorBlack from "@src/assets/img/MKOverveiw/VectorBlack.png"
 
 const titleMK = [
     {
-        name: "cryptocurrencies",
+        name: "Name",
         id: 1,
     },
     {
-        name: "Last Price",
+        name: "Price",
         id: 2,
     },
     {
@@ -35,120 +35,206 @@ const titleMK = [
         id: 3,
     },
     {
-        name: "Market Cap",
+        name: "24h Volume",
         id: 4,
     },
     {
-        name: "Last 7 Days",
+        name: "Market Cap",
         id: 5,
+    },
+    {
+        name: "Last 7 Days",
+        id: 6,
     },
 ]
 
 const dataMK = [
     {
-        img: ImgCnow,
+        img: Shape,
+        imgcoin: ImgCnow,
         name: "CNow",
-        LastPrice: "$1.0",
+        Price: "$1.0",
         Change: "9.4%",
-        MarketCap: "$3,000M",
+        volume: "$3,000M",
+        MarketCap: "$179.92M",
         Chart: ChartCnow,
         id: 1,
     },
     {
-        img: ImgBTC,
+        img: Shape,
+        imgcoin: ImgBTC,
         name: "Bitcoin",
-        LastPrice: "$53,260.20",
+        Price: "$53,260.20",
         Change: "5.4%",
-        MarketCap: "$38,000M",
+        volume: "$38,000M",
+        MarketCap: "$179.92M",
         Chart: ChartBTC,
         id: 2,
     },
     {
-        img: ImgETH,
+        img: Shape,
+        imgcoin: ImgETH,
         name: "Ethereum",
-        LastPrice: "$1,921",
+        Price: "$1,921",
         Change: "2.4%",
-        MarketCap: "$38,000M",
+        volume: "$38,000M",
+        MarketCap: "$179.92M",
         Chart: ChartETH,
         id: 3,
     },
     {
-        img: ImgBNB,
+        img: Shape,
+        imgcoin: ImgBNB,
         name: "Binance Coin",
-        LastPrice: "$124.9",
+        Price: "$124.9",
         Change: "-0.4%",
-        MarketCap: "$38,000M",
+        volume: "$38,000M",
+        MarketCap: "$179.92M",
         Chart: ChartBNB,
         id: 4,
     },
     {
-        img: ImgXRP,
-        name: "CNow",
-        LastPrice: "$1.12",
+        img: Shape,
+        imgcoin: ImgXRP,
+        name: "XRP",
+        Price: "$1.12",
         Change: "5.4%",
-        MarketCap: "$38,000M",
+        volume: "$38,000M",
+        MarketCap: "$179.92M",
         Chart: ChartXRP,
         id: 5,
     },
     {
-        img: ImgUSDT,
+        img: Shape,
+        imgcoin: ImgUSDT,
         name: "Tether",
-        LastPrice: "$1.0",
+        Price: "$1.0",
         Change: "-1.4%",
-        MarketCap: "$38,000M",
+        volume: "$38,000M",
+        MarketCap: "$179.92M",
         Chart: ChartUSDT,
         id: 6,
     },
     {
-        img: ImgACT,
+        img: Shape,
+        imgcoin: ImgACT,
         name: "Achain",
-        LastPrice: "$1.23",
+        Price: "$1.23",
         Change: "2.4%",
-        MarketCap: "$38,000M",
+        volume: "$38,000M",
+        MarketCap: "$179.92M",
         Chart: ChartACT,
         id: 7,
     },
     {
-        img: ImgOGN,
+        img: Shape,
+        imgcoin: ImgOGN,
         name: "Origin Protocol",
-        LastPrice: "$1.54",
+        Price: "$1.54",
         Change: "3.4%",
-        MarketCap: "$38,000M",
+        volume: "$38,000M",
+        MarketCap: "$179.92M",
         Chart: ChartOGN,
         id: 8,
     },
 
 ]
 
-const datacard = [
-    {       
-        img: ImgCnow,
-        dollar: "$1.0",
-        percent: "9.4%",
-        id: 1,
-    },
-    {       
-        img: ImgBTC,
-        dollar: "$53,260.20",
-        percent: "9.4%",
-        id: 2,
-    },
-]
 const datatitle = [
     {
         name: "Highlight Coin",
         id: 1,
+        dataCoin: [
+            {
+                img: ImgCnow,
+                dollar: "$1.0",
+                percent: "9.4%",
+                id: 1,
+            },
+            {
+                img: ImgBTC,
+                dollar: "$53,260.20",
+                percent: "9.4%",
+                id: 2,
+            },
+            {
+                img: ImgETH,
+                dollar: "$1,921",
+                percent: "9.4%",
+                id: 3,
+            },
+        ]
     },
     {
         name: "New Listing",
         id: 2,
+        dataCoin: [
+            {
+                img: ImgBNB,
+                dollar: "$245.50",
+                percent: "-0.20%",
+                id: 1,
+            },
+            {
+                img: ImgXRP,
+                dollar: "$53,260.20",
+                percent: "1.4%",
+                id: 2,
+            },
+            {
+                img: ImgACT,
+                dollar: "$1,921",
+                percent: "-0.4%",
+                id: 3,
+            },
+        ]
     },
     {
         name: "Top Gainer Coin",
         id: 3,
-    },{
+        dataCoin: [
+            {
+                img: ImgOGN,
+                dollar: "$1.0",
+                percent: "9.4%",
+                id: 1,
+            },
+            {
+                img: ImgBTC,
+                dollar: "$53,260.20",
+                percent: "9.4%",
+                id: 2,
+            },
+            {
+                img: ImgETH,
+                dollar: "$1,921",
+                percent: "9.4%",
+                id: 3,
+            },
+        ]
+    }, {
         name: "Top Volume Coin",
         id: 4,
+        dataCoin: [
+            {
+                img: ImgCnow,
+                dollar: "$1.0",
+                percent: "9.4%",
+                id: 1,
+            },
+            {
+                img: ImgBTC,
+                dollar: "$53,260.20",
+                percent: "9.4%",
+                id: 2,
+            },
+            {
+                img: ImgETH,
+                dollar: "$1,921",
+                percent: "9.4%",
+                id: 3,
+            },
+        ]
     },
 ]
 
@@ -160,25 +246,25 @@ export default function MKOverveiw() {
             <div className="container">
                 <div className="Overveiw-main">
                     <div className="Overveiw-main_infor">
-                        <div>
-                            <div>Markets Overview</div>
-                            <div>
-                                <div>All price information is in</div>
-                                <div>VND <img src={VectorBlack} alt="" /></div>
+                        <div className="title">
+                            <div style={{ fontSize: "32px", fontWeight: "bold" }}>Markets Overview</div>
+                            <div className="price">
+                                <div style={{ fontSize: "16px" }}>All price information is in</div>
+                                <div className="VND">VND <img src={VectorBlack} alt="" /></div>
                             </div>
                         </div>
-                        <div>
+                        <div className="listinfor">
                             {datatitle.map((e) => {
-                                return(
-                                    <div>
-                                        <div>{e.name}</div>
-                                        <div>
-                                            {datacard.map((el) => {
-                                                return(
-                                                    <div>
+                                return (
+                                    <div className="datainfor">
+                                        <div style={{ fontSize: "14px", fontWeight: "500" }}>{e.name}</div>
+                                        <div className="mapdatacoin">
+                                            {e.dataCoin.map((el) => {
+                                                return (
+                                                    <div className="datacoin">
                                                         <img src={el.img} alt="" />
                                                         <div>{el.dollar}</div>
-                                                        <div>{el.parcent}</div>
+                                                        <div>{el.percent}</div>
                                                     </div>
                                                 )
                                             })}
@@ -188,8 +274,57 @@ export default function MKOverveiw() {
                             })}
                         </div>
                     </div>
-                    <div className="Overveiw-main_table">asda</div>
+                    <div className="Overveiw-main_content" style={{ background: "#F7F9FB" }}>
+                        <div className="menu">
+                            <div className="menu-text">
+                                <div><img src={Shape} alt="" /></div>
+                                <div>Favorites</div>
+                                <div>All Crypto</div>
+                                <div>Gainers</div>
+                                <div>Losers</div>
+                                <div>Trending</div>
+                            </div>
+                            <div className="menu-input">
+                                <div><input type="text" placeholder="Enter Token name/ address" /></div>
+                                <div><img src={Search} alt="" /></div>
+                            </div>
+                        </div>
+                        <div className="table">
+                            <div className="table-title">
+                                {titleMK.map((e) => {
+                                    return (
+                                        <div>
+                                            <div>{e.name}</div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                            <div className="table-banner">
+                                {dataMK.map((e) => {
+                                    return (
+                                        <div className="mapbanner">
+                                            <div><img src={e.img} alt="" /></div>
+                                            <div className="child">
+                                                <div className="logo">
+                                                    <div><img src={e.imgcoin} alt="" /></div>
+                                                    <div style={{fontSize:"16px", color:" #848484"}}>{e.name}</div>
+                                                </div>
+                                                <div>{e.Price}</div>
+                                                <div>{e.Change}</div>
+                                                <div>{e.volume}</div>
+                                                <div>{e.MarketCap}</div>
+                                                <div>
+                                                    <img src={e.Chart} alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    )}
+    )
+}
