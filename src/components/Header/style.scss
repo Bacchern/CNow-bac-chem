@@ -13,7 +13,7 @@
             .MenuHeader{
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 15px;
                 @media (max-width:991px) {
                     flex-direction: column;
                 }
@@ -111,5 +111,87 @@
             gap: 10px;
             align-items: center;
         }
+    }
+}
+.showbuycrypto{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #DFDFDF;
+    width: 230px;
+    border-radius: 0 0 12px 12px;
+    margin-left: 153px;
+    transition: all 0.5s;
+    .showmap{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+}
+.showwallet{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #DFDFDF;
+    width: 230px;
+    border-radius: 0 0 12px 12px;
+    margin-left: 430px;
+    .showmap{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.showacti{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #DFDFDF;
+    width: 230px;
+    border-radius: 0 0 12px 12px;
+    margin-left: 520px;
+    .showmap{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.showp2p{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #DFDFDF;
+    width: 230px;
+    border-radius: 0 0 12px 12px;
+    margin-left: 484px;
+    .showmap{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.showconnect{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #DFDFDF;
+    width: 230px;
+    border-radius: 0 0 12px 12px;
+    margin-left: 622px;
+    .showmap{
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 }

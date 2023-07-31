@@ -1,0 +1,278 @@
+.Securtity{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        &_title{
+            display: flex;
+            align-items: center;
+            height: 78px;
+            .logo{
+                display: flex;
+                align-items: center;
+                max-width: 270px;
+                width: 100%;
+                justify-content: center;
+                gap: 10px;
+                .imgtitle{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .menu{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+                gap: 20px;
+                .childmenu{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                }
+            }
+        }
+        &_banner{
+            display: flex;
+            gap: 30px;
+            .menubanner{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                border-radius: 20px;
+                background: #F7F9FB;
+                max-width: 280px;
+                width: 100%;
+                padding: 10px;
+                .mapbanner{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-left: 30px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &-title{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    &_text{
+                        display: flex;
+                        border-radius: 10px;
+                        justify-content: center;
+                        border: 1px solid #EC2624;
+                        background: #EC26240D;
+                        padding: 10px;
+                        font-size: 12px;
+                        width: 100%;
+                        
+                    }
+                }
+                &-main{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    &_factor{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        .father{
+                            display: flex;
+                            background: #F7F9FB;
+                            border-radius: 10px ;
+                            padding: 10px;
+                            max-width: 480px;
+                            width: 100%;
+                            justify-content: space-between;
+                            &-text{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 5px;
+                                max-width: 320px;
+                                width: 100%;
+                                font-size: 12px;
+
+                                .passkeys{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 5px;
+                                    .recom{
+                                        display: flex;
+                                        border-radius: 10px;
+                                        background: #EC26240D ;
+                                        font-size: 12px;
+                                        padding: 5px;
+                                        color: #EC2624;
+                                    }
+                                    &:first-child{
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                }
+                                &_title{
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                }
+                            }
+                            &-click{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+                                font-weight: 600;
+                                font-size: 14px;
+                                align-items: flex-end;
+                                .off{
+                                    display: flex;
+                                    gap: 5px;
+                                    align-items: center;
+                                }
+                                .able{
+                                    border-radius: 100px;
+                                    background: white;
+                                    padding: 5px 15px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                &-advan{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    .advanced{
+                        display: flex;
+                        gap: 20px;
+                        &-account{
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            gap: 15px;
+                            .mapadvan{
+                                display: flex;
+                                padding: 10px;
+                                border-radius: 10px;
+                                background: #F7F9FB;
+                                max-width: 497px;
+                                width: 100%;
+                                justify-content: space-between;
+                                &-doc{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 5px;
+                                    font-size: 12px;
+                                    max-width: 319px;
+                                    width: 100%;
+                                    
+                                }
+                                &-mana{
+                                    display: flex;
+                                    align-items: flex-end;
+                                    .manage{
+                                        display: flex;
+                                        border-radius: 100px;
+                                        padding: 5px 15px;
+                                        background: white;
+                                        max-width: 95px;
+                                        width: 100%;
+                                        justify-content: center;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                        &-withdrawal{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 7px;
+                            border-radius: 10px;
+                            background: #F7F9FB;
+                            padding: 10px;
+                            max-width: 497px;
+                            width: 100%;
+                            .mapwith{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                &-main{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    &_text{
+                                        font-size: 12px;
+                                        max-width: 319px;
+                                        width: 100%;
+                                    }
+                                    &_click{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap:10px;
+                                        align-items: flex-end;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        .clickoff{
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 5px;
+                                        }
+                                        .mana{
+                                            border-radius: 100px;
+                                            background: white;
+                                            padding: 5px 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-devices{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .mapdevi{
+                        display: flex;
+                        gap: 20px;
+                        &-main{
+                            display: flex;
+                            justify-content: space-between;
+                            background: #F7F9FB;
+                            border-radius: 10px;
+                            padding: 10px;
+                            max-width: 497px;
+                            width: 100%;
+                            padding-bottom: 20px;
+                            &_doc{
+                                display: flex;
+                                flex-direction: column;
+                                font-size: 12px;
+                                gap: 5px;
+                                max-width: 319px;
+                                width: 100%;
+                            }
+                            &_button{
+                                display: flex;
+                                align-items: flex-end;
+                                .click{
+                                    display: flex;
+                                    border-radius: 100px;
+                                    padding: 5px 15px;
+                                    background: white;
+                                    height: 30px;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

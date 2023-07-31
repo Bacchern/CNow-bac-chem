@@ -8,7 +8,22 @@ import iconngonngu from "@src/assets/img/icon_ngonngu 1.png"
 import Chamtron from "@src/assets/img/9Cham.png"
 import VectorUp from "@src/assets/img/VectorUp.png"
 import VectorDown from "@src/assets/img/VectorDown.png"
-
+import quickbuy from "@src/assets/img/Header/quickbuy.png"
+import Credit from "@src/assets/img/Header/Credit.png"
+import cash from "@src/assets/img/Header/cash.png"
+import overview from "@src/assets/img/Header/overview.png"
+import deposit from "@src/assets/img/Header/deposit.png"
+import withdraw from "@src/assets/img/Header/withdraw.png"
+import transfer from "@src/assets/img/Header/transfer.png"
+import rewardshub from "@src/assets/img/Header/rewardshub.png"
+import referral from "@src/assets/img/Header/referral.png"
+import ambassadors from "@src/assets/img/Header/ambassadors.png"
+import tranding from "@src/assets/img/Header/tranding.png"
+import management from "@src/assets/img/Header/management.png"
+import history from "@src/assets/img/Header/history.png"
+import announcements from "@src/assets/img/Header/announcements.png"
+import faq from "@src/assets/img/Header/faq.png"
+import cnowblog from "@src/assets/img/Header/cnowblog.png"
 
 
 
@@ -77,6 +92,117 @@ const Icon = [
 ]
 
 
+const showdata = [
+  {
+    img: quickbuy,
+    title: "Quick Buy/Sell",
+    text: "Deposit  via  or Card",
+    id: 1,
+  },
+  {
+    img: Credit,
+    title: "Credit/Debit Card",
+    text: "Deposit  via  or Card",
+    id: 2,
+  },
+  {
+    img: cash,
+    title: "Cash CNow",
+    text: "Buy Crypto with your CNow",
+    id: 2,
+  },
+]
+
+const showwallet = [
+  {
+    img: overview,
+    title: "Overview",
+    text: "Deposit  via  or Card",
+    id: 1,
+  },
+  {
+    img: deposit,
+    title: "Deposit",
+    text: "Deposit  via  or Card",
+    id: 2,
+  },
+  {
+    img: withdraw,
+    title: "Withdraw",
+    text: "Buy Crypto with your CNow",
+    id: 3,
+  },
+  {
+    img: transfer,
+    title: "Transfer",
+    text: "Buy Crypto with your CNow",
+    id: 4,
+  },
+]
+
+const showacti = [
+  {
+    img: rewardshub,
+    title: "Rewards Hub",
+    text: "Win Cryptos and other Rewards every day",
+    id: 1,
+  },
+  {
+    img: referral,
+    title: "Referral",
+    text: "Earn 30%  commission",
+    id: 2,
+  },
+  {
+    img: ambassadors,
+    title: "CNow Ambassadors",
+    text: "Easily enjo doubl income hight - commission and trading profits",
+    id: 3,
+  },
+]
+
+const showp2p = [
+  {
+    img: tranding,
+    title: "Trading",
+    text: "Deposit  via  or Card",
+    id: 1,
+  },
+  {
+    img: management,
+    title: "Management",
+    text: "Deposit  via  or Card",
+    id: 2,
+  },
+  {
+    img: history,
+    title: "History",
+    text: "Buy Crypto with your CNow",
+    id: 3,
+  },
+]
+
+const showconnect = [
+  {
+    img: announcements,
+    title: "Announcements",
+    text: "Stay up-to-da with the lates crypto trend",
+    id: 1,
+  },
+  {
+    img: faq,
+    title: "FAQ",
+    text: "Stay up-to-da with the lates crypto trend",
+    id: 2,
+  },
+  {
+    img: cnowblog,
+    title: "CNow Blog",
+    text: "Stay up-to-da with the lates crypto trend",
+    id: 3,
+  },
+]
+
 
 
 
@@ -88,7 +214,20 @@ export default function Header() {
     setOpen(!open)
   }
 
-  console.log(open);
+  // console.log(open);
+
+  const [show, setShow] = useState(-1)
+  const onShow = (e) => {
+    if (show == e.id) {
+      setShow(-1)
+    } else {
+      setShow(e.id)
+    }
+  }
+
+  // console.log(onShow);
+  console.log(show);
+
   return (
     <>
       <div className='header' style={{ background: "#232531" }} >
@@ -110,7 +249,7 @@ export default function Header() {
                 {ListHeader.map((e, i) => {
                   return (
                     <div className='MapMenu' key={i} >
-                      <div>{e.name}</div>
+                      <div style={{ fontSize: "14px" }} onClick={() => onShow(e)}>{e.name}</div>
                       {/* <div className='imgMenu'><img src={VectorUp} alt="" /></div> */}
                     </div>
                   )
@@ -124,37 +263,111 @@ export default function Header() {
                 <div className='SingUp'>Sign up</div>
               </div>
               <div className='iconheader'>
-              {Icon.map((e, i) => {
-                return (
-                  <div className='mapicon' key={i}>
-                    <img src={e.img} alt="" />
-                  </div>
+                {Icon.map((e, i) => {
+                  return (
+                    <div className='mapicon' key={i}>
+                      <img src={e.img} alt="" />
+                    </div>
 
-                )
-              })}
+                  )
+                })}
               </div>
-              
+
 
             </div>
 
           </div>
 
         </div>
+
       </div>
       <div className={`MapMobile ${open && 'active'}`} style={{ height: `${open ? '226px' : '0'}` }}>
-        {open && 
-        <div>
-        {ListHeader.map((e, i) => {
+        {open &&
+          <div>
+            {ListHeader.map((e, i) => {
+              return (
+                <div className='MenuMoblie' key={i} >
+                  <div>⊛</div>
+                  <div>{e.name}</div>
+                  {/* <div className='imgMenu'><img src={VectorUp} alt="" /></div> */}
+                </div>
+              )
+            })}
+          </div> || ""}
+      </div>
+      {show == 1 && <div className='showbuycrypto'>
+        {showdata.map((e) => {
           return (
-            <div className='MenuMoblie' key={i} >
-              <div>⊛</div>
-              <div>{e.name}</div>
-              {/* <div className='imgMenu'><img src={VectorUp} alt="" /></div> */}
+            <div className='showmap'>
+              <div><img src={e.img} alt="" /></div>
+              <div className='showmap-main'>
+                <div style={{ fontSize: "14px", fontWeight: "bold" }}>{e.title}</div>
+                <div style={{ fontSize: "10px" }}>{e.text}</div>
+              </div>
             </div>
           )
         })}
-        </div> || ""}
-      </div>
+      </div>}
+      {show == 5 &&
+        <div className='showwallet'>
+          {showwallet.map((e) => {
+            return (
+              <div className='showmap'>
+                <div><img src={e.img} alt="" /></div>
+                <div className='showmap-main'>
+                  <div style={{ fontSize: "14px", fontWeight: "bold" }}>{e.title}</div>
+                  <div style={{ fontSize: "10px" }}>{e.text}</div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      }
+      {show == 7 &&
+        <div className='showacti'>
+          {showacti.map((e) => {
+            return (
+              <div className='showmap'>
+                <div><img src={e.img} alt="" /></div>
+                <div className='showmap-main'>
+                  <div style={{ fontSize: "14px", fontWeight: "bold" }}>{e.title}</div>
+                  <div style={{ fontSize: "10px" }}>{e.text}</div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      }
+      {show == 6 &&
+        <div className='showp2p'>
+          {showp2p.map((e) => {
+            return (
+              <div className='showmap'>
+                <div><img src={e.img} alt="" /></div>
+                <div className='showmap-main'>
+                  <div style={{ fontSize: "14px", fontWeight: "bold" }}>{e.title}</div>
+                  <div style={{ fontSize: "10px" }}>{e.text}</div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      }
+      {show == 9 &&
+        <div className='showconnect'>
+          {showconnect.map((e) => {
+            return (
+              <div className='showmap'>
+                <div><img src={e.img} alt="" /></div>
+                <div className='showmap-main'>
+                  <div style={{ fontSize: "14px", fontWeight: "bold" }}>{e.title}</div>
+                  <div style={{ fontSize: "10px" }}>{e.text}</div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      }
     </>
 
 

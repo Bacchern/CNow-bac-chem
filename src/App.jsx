@@ -20,6 +20,7 @@ import TitleCryptos from "./components/TitleCryptos"
 import BuyCrypto from "./BuyCrypto"
 import Deposit from "./Deposit"
 import Swap from "./Swap"
+import Security from "./Security"
 
 
 const attri = {
@@ -51,7 +52,8 @@ function App() {
       {/* <TitleCryptos/> */}
       {/* <BuyCrypto/> */}
       {/* <Deposit/> */}
-      <Swap/>
+      {/* <Swap/> */}
+      <Security/>
     </>
   );
 }
