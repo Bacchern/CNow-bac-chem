@@ -1,0 +1,132 @@
+.title{
+    &-main{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        height: 78px;
+        padding-left: 30px;
+        @media (max-width:670px) {
+            padding-left: 15px;
+            
+        }
+    }
+}
+.iden{
+    &-main{
+        display: flex;
+        gap: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @media (max-width:670px) {
+            gap: 20px;
+        }
+        &_menubanner{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                border-radius: 20px;
+                background: #F7F9FB;
+                max-width: 280px;
+                width: 100%;
+                padding: 10px;
+                align-items: flex-start;
+                @media (max-width:900px) {
+                    max-width: 200px;
+                }
+                @media (max-width:670px) {
+                    max-width: 130px;
+                    
+                }
+                .mapbanner{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-left: 30px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    @media (max-width:670px) {
+                        margin-left: 10px;                        
+                    }
+                }
+        }
+        &_content{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            .title{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                >div{
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                @media (max-width:600px) {
+                    >div{
+                        font-size: 20px;
+                    }
+                }
+            }
+            .limits{
+                display: flex;
+                gap: 30px;   
+                @media (max-width:950px) {
+                    flex-direction: column;
+                }
+                &-get{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    background: #F7F9FB;
+                    padding: 20px;
+                    width: 100%;
+                    max-width: 497px;
+                    .veri{
+                        display: flex;
+                        border-radius: 100px;
+                        padding: 5px 15px;
+                        background: #EC2624;
+                        color: white;
+                        width: 136px;
+                        justify-content: center;
+                    }
+                }
+                &-account{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 100%;
+                    max-width: 497px;
+                    &_map{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .child{
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 12px;
+                            align-items: center;
+                            &-img{
+                                display: flex;
+                                gap: 10px;
+                                align-items: center;
+                                @media (max-width:420px) {
+                                    max-width: 170px;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .faq{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+}

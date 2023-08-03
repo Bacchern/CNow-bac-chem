@@ -122,8 +122,9 @@
     border: 1px solid #DFDFDF;
     width: 230px;
     border-radius: 0 0 12px 12px;
-    margin-left: 153px;
-    transition: all 0.5s;
+    margin-left: 295px;
+    position: absolute;
+    z-index: 9;
     .showmap{
         display: flex;
         align-items: center;
@@ -140,7 +141,9 @@
     border: 1px solid #DFDFDF;
     width: 230px;
     border-radius: 0 0 12px 12px;
-    margin-left: 430px;
+    margin-left: 570px;
+    position: absolute;
+    z-index: 9;
     .showmap{
         display: flex;
         align-items: center;
@@ -156,7 +159,9 @@
     border: 1px solid #DFDFDF;
     width: 230px;
     border-radius: 0 0 12px 12px;
-    margin-left: 520px;
+    margin-left: 664px;
+    position: absolute;
+    z-index: 9;
     .showmap{
         display: flex;
         align-items: center;
@@ -172,7 +177,9 @@
     border: 1px solid #DFDFDF;
     width: 230px;
     border-radius: 0 0 12px 12px;
-    margin-left: 484px;
+    margin-left: 625px;
+    position: absolute;
+    z-index: 9;
     .showmap{
         display: flex;
         align-items: center;
@@ -188,7 +195,9 @@
     border: 1px solid #DFDFDF;
     width: 230px;
     border-radius: 0 0 12px 12px;
-    margin-left: 622px;
+    margin-left: 764px;
+    position: absolute;
+    z-index: 9;
     .showmap{
         display: flex;
         align-items: center;
