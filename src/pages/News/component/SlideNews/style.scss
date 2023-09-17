@@ -1,0 +1,65 @@
+.titles{
+    &-icon{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: flex-start;
+            >div{
+                font-size: 24px;
+                font-weight: 600;
+            }
+    }
+}
+
+.slidenews{
+    &-main{
+        
+            display: flex;
+            // flex-direction: column;
+            gap: 10px;
+            padding-bottom: 20px;
+            
+            &_title{
+                display: flex;
+                >div{
+                    flex: 1;
+                }
+                .img{
+                    >img{
+                        width: 95%;
+                    }
+                }
+                @media (max-width: 1000px) {
+                    flex-direction: column;
+                    gap: 15px;
+                    .img{
+                        >img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: flex-start;
+                    .charity{
+                        font-size: 36px;
+                        font-weight: 600;
+                        max-width: 612px;
+                        width: 100%;
+                    }
+                    .binance{
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    .date{
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #78808E;
+                    }
+                }
+            }
+        
+    }
+}

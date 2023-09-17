@@ -1,0 +1,49 @@
+.menunews {
+    &-main {
+        display: flex;
+        gap: 20px;
+        @media (max-width:991px) {
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        &_map {
+            display: flex;
+            gap: 10px;
+            max-width: 800px;
+            width: 100%;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                height: 5px;
+              }
+            &::-webkit-scrollbar-thumb {
+                background: #888; 
+                border-radius: 10px;
+              }
+              
+            .namemap {
+                border-radius: 100px;
+                background: #FFFFFF;
+                padding: 7px 15px;
+                font-size: 14px;
+                font-weight: 600;
+                margin: auto;
+            }
+        }
+
+        &_search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 100px;
+            border: 1px solid #DFDFDF;
+            background: #FFFFFF;
+            padding: 10px 20px;
+            max-width: 350px;
+            width: 100%;
+            .inputt{
+                outline: none;
+            }
+        }
+    }
+}

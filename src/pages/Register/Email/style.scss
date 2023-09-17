@@ -1,0 +1,94 @@
+.Email{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 20px;
+        // width: 100%;
+        &_table{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 20px;
+            background: white;
+            padding: 20px;
+            .title{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .menu{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .contact{
+                    display: flex;
+                    gap: 20px;
+                    .emailcontact{
+                        display: flex;
+                        border: 1px solid black;
+                        border-radius: 100px ;
+                        padding: 10px 30px;
+                        background: linear-gradient(265.56deg, #F5F5F5 -0.27%, #FFFFFF -0.26%, #F5F5F5 98.59%) ;
+                        font-size: 18px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .phonecontact{
+                        display: flex;
+                        border-radius: 100px ;
+                        padding: 10px 30px;
+                        background:  linear-gradient(265.56deg, #F5F5F5 -0.27%, #FFFFFF -0.26%, #F5F5F5 98.59%);
+                        font-size: 18px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                .personal{
+                    border: 1px solid #DFDFDF;
+                    border-radius: 100px;
+                    padding: 20px 32px;
+                    >input{
+                        outline: none;
+                        width: 100%;
+                    }
+                   
+                }
+                .pass{
+                    display: flex;
+                    justify-content: space-between;
+                    border: 1px solid #DFDFDF;
+                    border-radius: 100px;
+                    padding: 20px 32px;
+                    >input{
+                        outline: none;
+                        width: 100%;
+                    }
+                }
+                .Id{
+                    border: 1px solid #DFDFDF;
+                    border-radius: 100px;
+                    padding: 20px 32px;
+                    >input{
+                        outline: none;
+                    }
+                }
+                .check{
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+            .button{
+                display: flex;
+                border-radius: 100px;
+                background: red;
+                color: white;
+                padding: 18px 32px;
+                font-size: 18px;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

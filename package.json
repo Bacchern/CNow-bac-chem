@@ -9,11 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.9.1",
+    "axios": "^1.5.0",
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
     "sass": "^1.62.0",
-    "styled-components": "^5.3.9"
+    "styled-components": "^5.3.9",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./style.scss"
 import LogoCnow from "@src/assets/img/LogoCnow.png"
 import Chamhoi from "@src/assets/img/Chamhoi.png"
@@ -24,50 +24,65 @@ import history from "@src/assets/img/Header/history.png"
 import announcements from "@src/assets/img/Header/announcements.png"
 import faq from "@src/assets/img/Header/faq.png"
 import cnowblog from "@src/assets/img/Header/cnowblog.png"
-
+import { NavLink } from 'react-router-dom'
+import { Auth } from '@src/Context/authContext'
+import profile from "@src/assets/img/Header/profile.png"
 
 
 const ListHeader = [
   {
     name: "Buy Crypto",
     id: 1,
-    isActve: false,
+    isActive: true,
+    link: "buy-crypto",
   },
   {
     name: "Markets",
     id: 2,
+    link: "markets-overview",
+    isActive: false,
   },
   {
     name: "Seed Sales",
     id: 3,
+    link: "seed-sale",
+    isActive: false,
   },
   {
     name: "Swap",
     id: 4,
+    link: "swap",
+    isActive: false,
   },
   {
     name: "Wallet",
     id: 5,
-    isActve: true,
+    link: "wallet-overview",
+    isActive: true,
   },
   {
     name: "P2P",
     id: 6,
-    isActve: true,
+    link: "p2p",
+    isActive: true,
   },
   {
     name: "Activity",
     id: 7,
-    isActve: true,
+    link: "activity",
+    isActive: true,
   },
   {
     name: "NFT",
     id: 8,
+    link: "nft",
+    isActive: false,
   },
   {
     name: "Content",
     id: 9,
-    isActive: false,
+    link: "content",
+    isActive: true,
   },
 ]
 
@@ -89,6 +104,10 @@ const Icon = [
     img: iconngonngu,
     id: 4,
   },
+  {
+    img: profile,
+    id: 5,
+  }
 ]
 
 
@@ -214,8 +233,6 @@ export default function Header() {
     setOpen(!open)
   }
 
-  // console.log(open);
-
   const [show, setShow] = useState(-1)
   const onShow = (e) => {
     if (show == e.id) {
@@ -225,8 +242,13 @@ export default function Header() {
     }
   }
 
-  // console.log(onShow);
-  console.log(show);
+  const { token } = useContext(Auth)
+  console.log(token);
+  const path = {
+    Login: 'login',
+    SignUp: 'signup',
+  }
+
 
   return (
     <>
@@ -237,31 +259,31 @@ export default function Header() {
               <div >
                 <img src={LogoCnow} alt="" />
               </div>
+              {token &&
               <div className='MenuHeader'>
-                <div onClick={onOpen} className='chamtron' >
-                  <div>
-                    <img src={Chamtron} alt="" />
-                  </div>
-                  <div>
-                    <img src={VectorDown} alt="" />
-                  </div>
+              <div onClick={onOpen} className='chamtron' >
+                <div>
+                  <img src={Chamtron} alt="" />
                 </div>
-                {ListHeader.map((e, i) => {
-                  return (
-                    <div className='MapMenu' key={i} >
-                      <div style={{ fontSize: "14px" }} onClick={() => onShow(e)}>{e.name}</div>
-                      {/* <div className='imgMenu'><img src={VectorUp} alt="" /></div> */}
-                    </div>
-                  )
-                })}
+                <div>
+                  <img src={VectorDown} alt="" />
+                </div>
+              </div>
+              {ListHeader.map((e, i) => {
+                return (
 
-              </div>
+                  <div className='MapMenu' key={i} >
+                    <NavLink to={e.link}><div style={{ fontSize: "14px", color: "white" }} >{e.name}</div></NavLink>
+                    {e.isActive == true && <div className='imgMenu' onClick={() => onShow(e)}><img src={VectorDown} alt="" /></div> || ""}
+                  </div>
+                )
+              })}
+
+            </div>}
             </div>
+            {token &&
             <div className='header-main_log'>
-              <div className='InUp'>
-                <div className='LogIn'>Log in</div>
-                <div className='SingUp'>Sign up</div>
-              </div>
+            {!token &&
               <div className='iconheader'>
                 {Icon.map((e, i) => {
                   return (
@@ -271,10 +293,20 @@ export default function Header() {
 
                   )
                 })}
-              </div>
+              </div> || ""}
+            {token &&
+              <div className='iconheader'>
+                {Icon.map((e, i) => {
+                  return (
+                    <div className='mapicon' key={i}>
+                      <img src={e.img} alt="" />
+                    </div>
 
-
-            </div>
+                  )
+                })}
+              </div> || ""
+            }
+          </div>}
 
           </div>
 

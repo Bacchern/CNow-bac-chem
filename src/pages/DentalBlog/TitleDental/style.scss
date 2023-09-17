@@ -1,0 +1,26 @@
+.titledental{
+    &-main{
+        display: flex;
+        gap: 10px;
+        height: 77px;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        @media (max-width:991px) {
+            width: 100%;
+        }
+        .icon{
+            display: flex;
+            border-radius: 100px;
+            background: black;
+            width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        >div{
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+}

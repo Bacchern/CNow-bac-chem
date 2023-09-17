@@ -1,0 +1,194 @@
+.staking{
+    display: flex;
+    padding-bottom: 20px;
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        &_title{
+            display: flex;
+            gap: 20px;
+            padding: 20px 20px 0px 20px;
+
+            .cnowstaking{
+                display: flex;
+                gap: 20px;
+                border-radius: 10px;
+                background: #F7F9FB;
+                max-width: 909px;
+                width: 100%;
+                padding: 20px;
+                justify-content: space-between;
+                &-text{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 550px;
+                    gap: 20px;
+                    &_title{
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+                    &_content{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+                        .value{
+                            display: flex;
+                            flex-direction: column;
+                            gap:5px;
+                            &-main{
+                                display: flex;
+                                justify-content: space-between;
+                                color: #848484;
+                                font-size: 14px;
+                                &:first-child{
+                                    color: #EC2624;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                        .staked{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            font-size: 14px;
+                            &-main{
+                                display: flex;
+                                justify-content: space-between;
+                                color: #EC2624;
+                            }
+                            &-bor{
+                                display: flex;
+                                border-radius: 50px;
+                                background:  #E8E8E8;
+                                height: 5px;
+                                width: 100%;
+                                .borred{
+                                    display: flex;
+                                    width: 139px;
+                                    background:  #EF1E1F;
+                                    border-radius: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-img{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                }
+            }
+            .logostaking{
+                display: flex;
+                align-items: center;
+                max-width: 400px;
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid  #E8E8E8;
+                
+                &-img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    max-width: 160px;
+                }
+                &-text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 100%;
+                    max-width: 240px;
+                    .child{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.content{
+    display: flex;
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 10px;
+        .menucontent{
+            display: flex;
+            gap: 20px;
+            margin: auto;
+            &-main{
+                display: flex;
+                border-radius: 100px;
+                padding: 10px 30px;
+                font-size: 14px;
+                background: white;
+            }
+        }
+        .data{
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            padding: 15px 10px 30px 10px;
+            max-width: 1341px;
+            width: 100%;
+            gap: 20px;
+            &-main{
+                display: flex;
+                flex-direction: column;
+                border-radius: 18px;
+                background: #F7F9FB;
+                max-width: 412px;
+                width: 100%;
+                gap: 10px;
+                padding-bottom: 20px;
+                &_map{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .cnow{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        justify-content: center;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #EC2624;
+                        .logocnow{
+                            max-width: 37px;
+                            width: 100%;
+                        }
+                    }
+                    .datacontent{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        font-size: 16px;
+                        .apr{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 0px 10px;
+                            .month{
+                                display: flex;
+                                border-radius: 100px;
+                                background: white;
+                                padding: 5px 15px;
+                                gap: 5px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

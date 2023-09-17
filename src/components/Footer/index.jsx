@@ -104,9 +104,9 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="textFooter">
-                            {menuText.map((e)=> {
+                            {menuText.map((e, i)=> {
                                 return(
-                                    <div className="mapFooter">
+                                    <div className="mapFooter" key={i}>
                                         <div style={{fontSize:"16px",fontWeight:"bold"}}>{e.title}</div>
                                         <div style={{fontSize:"14px"}}>{e.content1}</div>
                                         <div style={{fontSize:"14px"}}>{e.content2}</div>
@@ -120,9 +120,9 @@ export default function Footer() {
                     </div>
                     <div className="Footer-main_img">
                         <div className="menuImg">
-                            {menuImg.map((e) => {
+                            {menuImg.map((e, i) => {
                                 return(
-                                    <img src={e.img} alt="" />
+                                    <img src={e.img} alt="" key={i}/>
                                 )
                             })}
                         </div>

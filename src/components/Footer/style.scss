@@ -49,13 +49,16 @@
                 display: flex;
                 width: 100%;
                 justify-content: space-between;
+                @media (max-width:500px) {
+                    gap: 5px;
+                }
                 .mapFooter{
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
                     @media (max-width:778px) {
                         >div{
-                            font-size: 12px !important;
+                            font-size: 10px !important;
                         }
                     }
                 }
