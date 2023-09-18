@@ -10,7 +10,9 @@ import { Auth } from "@src/Context/authContext"
 
 
 export default function Email() {
-    const {handleChange, onLogin, form} = useContext(Auth)
+    const {handleChange, onLogin, form, onKey} = useContext(Auth)
+
+    
 
     return (
         <div className="Email" style={{ backgroundColor: "#F7F9FB" }}>
@@ -27,9 +29,9 @@ export default function Email() {
                                 <div className="emailcontact">Email</div>
                                 <div className="phonecontact">Phone</div>
                             </div>
-                            <div className="personal"><input type="text" placeholder="Personal Email" onChange={handleChange} name="email"/></div>
+                            <div className="personal"><input type="text" placeholder="Personal Email" onChange={handleChange} name="email" onKeyUp={onKey}/></div>
                             <div className="pass">
-                                <input type="password" placeholder="Password" onChange={handleChange} name="password" />
+                                <input type="password" placeholder="Password" onChange={handleChange} name="password" onKeyUp={onKey}/>
                                 <img src={Eye} alt="" />
                             </div>
                             <div>Referral ID (Optional)</div>
@@ -40,7 +42,7 @@ export default function Email() {
                                 <div style={{fontSize:"14px"}}>I have read and agree to Binance's <span style={{fontWeight:"bold"}}>Terms of Service</span> and Privacy Policy.</div>
                             </div>
                         </div>
-                        <div className="button" onClick={onLogin}>Create Personal Account</div>
+                        <div className="button" onClick={onLogin} >Create Personal Account</div>
                     </div>
                     <div className="Email-main_text">Not looking for a personal account? Sign up for an entity account</div>
                 </div>

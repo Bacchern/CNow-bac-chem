@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./style.scss"
 import ImgCnow from "@src/assets/img/ImgCnow.png"
 import ImgACT from "@src/assets/img/ImgACT.png"
@@ -16,12 +16,13 @@ import ChartETH from "@src/assets/img/ChartETH.png"
 import ChartOGN from "@src/assets/img/ChartOGN.png"
 import ChartUSDT from "@src/assets/img/ChartUSDT.png"
 import ChartXRP from "@src/assets/img/ChartXRP.png"
+import axios from "axios"
 // import ArrowRight from "@src/assets/img/ArrowRight.png"
 
 
 const titleMarkets = [
     {
-        name: "cryptocurrencies",
+        name: "Assets",
         id: 1,
     },
     {
@@ -29,16 +30,28 @@ const titleMarkets = [
         id: 2,
     },
     {
-        name: "24h Change",
+        name: "Change",
         id: 3,
     },
     {
-        name: "Market Cap",
+        name: "24H High",
         id: 4,
     },
     {
-        name: "Chart",
+        name: "24H Low",
         id: 5,
+    },
+    {
+        name: "24H Volume",
+        id: 6,
+    },
+    {
+        name: "24H Top Tier",
+        id: 7,
+    },
+    {
+        name: "Chart",
+        id: 8,
     },
 ]
 
@@ -120,30 +133,44 @@ const dataMarkets = [
 
 const content = [
     {
-        data:"$10 M",
-        name:"24h trading volume on CNow exchange",
+        data: "$10 M",
+        name: "24h trading volume on CNow exchange",
         id: 1,
     },
     {
-        data:"100+",
-        name:"Cryptocurrencies listed",
+        data: "100+",
+        name: "Cryptocurrencies listed",
         id: 2,
     },
     {
-        data:"100+ million",
-        name:"Registered users",
+        data: "100+ million",
+        name: "Registered users",
         id: 3,
     },
     {
-        data:"<0.10%",
-        name:"Lowest transaction fees",
+        data: "<0.10%",
+        name: "Lowest transaction fees",
         id: 4,
     },
 ]
 
 export default function Markets() {
+
+    const [apiMarket, setapiMarket] = useState([])
+    const getApiMarket = async () => {
+        const res = await axios.get('https://api.theoverall.tech/api/market/v1/list')
+        setapiMarket(res.data.data)
+
+    }
+    console.log(apiMarket);
+
+    useEffect(() => {
+        getApiMarket()
+    }, [])
+
+
     return (
-        <div className="Markets" style={{backgroundColor:"#F7F9FB"}}>
+        <div className="Markets" style={{ backgroundColor: "#F7F9FB" }}>
             <div className="container">
                 <div className="Markets-main">
                     <div className="Markets-main_title">
@@ -160,17 +187,21 @@ export default function Markets() {
                             })}
                         </div>
                         <div className="DataTable">
-                            {dataMarkets.map((e) => {
+                            {apiMarket.map((e) => {
                                 return (
                                     <div className="MapData" >
                                         <div className="NameData">
-                                            <img src={e.img} alt="" />
+                                            <img src={e.image} alt="" />
+                                            <div>{e.symbol}</div>
                                             <div className="NameCoin">{e.name}</div>
                                         </div>
-                                        <div>{e.LastPrice}</div>
-                                        <div>{e.Change}</div>
-                                        <div>{e.MarketCap}</div>
-                                        <div style={{display:"flex", justifyContent:"center"}}><img src={e.Chart} alt="" /></div>
+                                        <div>{e.price}</div>
+                                        <div>{e.change}%</div>
+                                        <div>{e.HIGH24HOUR}</div>
+                                        <div>{e.LOW24HOUR}</div>
+                                        <div>{e.TOTALVOLUME24H}</div>
+                                        <div>{e.TOTALTOPTIERVOLUME24HTO}</div>
+                                        <div><img src={e.trade} alt="" /></div>
                                     </div>
                                 )
                             })}
@@ -178,10 +209,10 @@ export default function Markets() {
                     </div>
                     <div className="Markets-main_content">
                         {content.map((e) => {
-                            return(
+                            return (
                                 <div className="CnowExchange">
-                                    <div style={{fontSize:"24px", fontWeight:"bold"}}>{e.data}</div>
-                                    <div style={{fontSize:"16px"}}>{e.name}</div>
+                                    <div style={{ fontSize: "24px", fontWeight: "bold" }}>{e.data}</div>
+                                    <div style={{ fontSize: "16px" }}>{e.name}</div>
                                 </div>
                             )
                         })}

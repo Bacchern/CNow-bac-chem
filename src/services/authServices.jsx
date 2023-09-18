@@ -8,6 +8,10 @@ export const authServices = {
         return axios.post(`${port}api/user/v1/login`,form)
 
     },
+
+    logout: (form) => {
+        return axios.post(`${port}api/user/v1/login`,form)
+    }
  
 }
 

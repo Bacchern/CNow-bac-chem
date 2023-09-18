@@ -46,18 +46,18 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
             <Route path="buy-crypto" element={<BuyCrypto />} />
             <Route path="markets-overview" element={<MKOverveiw />} />
             <Route path="swap" element={<Swap />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="news" element={<News />} />
             <Route path="dental" element={<DentalBlog />} />
+            <Route path="wallet-overview" element={<WalletOverveiw />} />
           </Route>
         </Routes>
         <Routes>
           <Route path="/" element={<AuthLayout />}>
-            <Route path="wallet-overview" element={<WalletOverveiw />} />
+          <Route path="home" element={<Home />} />
             <Route path="login" element={<Email />} />
           </Route>
         </Routes>

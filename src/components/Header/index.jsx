@@ -27,7 +27,7 @@ import cnowblog from "@src/assets/img/Header/cnowblog.png"
 import { NavLink } from 'react-router-dom'
 import { Auth } from '@src/Context/authContext'
 import profile from "@src/assets/img/Header/profile.png"
-
+import logout from "@src/assets/img/Header/iconlogout.png"
 
 const ListHeader = [
   {
@@ -242,8 +242,8 @@ export default function Header() {
     }
   }
 
-  const { token } = useContext(Auth)
-  console.log(token);
+  const { token, onLogout } = useContext(Auth)
+  // console.log(token);
   const path = {
     Login: 'login',
     SignUp: 'signup',
@@ -256,62 +256,65 @@ export default function Header() {
         <div className='container'>
           <div className='header-main'>
             <div className='header-main_menu'>
+              <NavLink to="/home">
               <div >
                 <img src={LogoCnow} alt="" />
               </div>
+              </NavLink>
               {token &&
-              <div className='MenuHeader'>
-              <div onClick={onOpen} className='chamtron' >
-                <div>
-                  <img src={Chamtron} alt="" />
-                </div>
-                <div>
-                  <img src={VectorDown} alt="" />
-                </div>
-              </div>
-              {ListHeader.map((e, i) => {
-                return (
-
-                  <div className='MapMenu' key={i} >
-                    <NavLink to={e.link}><div style={{ fontSize: "14px", color: "white" }} >{e.name}</div></NavLink>
-                    {e.isActive == true && <div className='imgMenu' onClick={() => onShow(e)}><img src={VectorDown} alt="" /></div> || ""}
+                <div className='MenuHeader'>
+                  <div onClick={onOpen} className='chamtron' >
+                    <div>
+                      <img src={Chamtron} alt="" />
+                    </div>
+                    <div>
+                      <img src={VectorDown} alt="" />
+                    </div>
                   </div>
-                )
-              })}
+                  {ListHeader.map((e, i) => {
+                    return (
 
-            </div>}
+                      <div className='MapMenu' key={i} >
+                        <NavLink to={e.link}><div style={{ fontSize: "14px", color: "white" }} >{e.name}</div></NavLink>
+                        {e.isActive == true && <div className='imgMenu' onClick={() => onShow(e)}><img src={VectorDown} alt="" /></div> || ""}
+                      </div>
+                    )
+                  })}
+
+                </div>}
             </div>
             {token &&
-            <div className='header-main_log'>
-            {!token &&
-              <div className='iconheader'>
-                {Icon.map((e, i) => {
-                  return (
-                    <div className='mapicon' key={i}>
-                      <img src={e.img} alt="" />
-                    </div>
+              <div className='header-main_log'>
+                {!token &&
+                  <div className='iconheader'>
+                    {Icon.map((e, i) => {
+                      return (
+                        <div className='mapicon' key={i}>
+                          <img src={e.img} alt="" />
+                        </div>
+                      )
+                    })}
+                  </div> || ""}
+                {token &&
+                  <div className='iconheader'>
+                    {Icon.map((e, i) => {
+                      return (
+                        <div className='mapicon' key={i}>
+                          <img src={e.img} alt="" />
 
-                  )
-                })}
-              </div> || ""}
-            {token &&
-              <div className='iconheader'>
-                {Icon.map((e, i) => {
-                  return (
-                    <div className='mapicon' key={i}>
-                      <img src={e.img} alt="" />
-                    </div>
+                        </div>
+                      )
+                    })}
+                    
 
-                  )
-                })}
-              </div> || ""
+                  </div> || ""
+                  
+                }
+                <div className='logout' onClick={onLogout}><img src={logout} alt="" /></div>
+              </div>
             }
-          </div>}
-
           </div>
-
         </div>
-
       </div>
       <div className={`MapMobile ${open && 'active'}`} style={{ height: `${open ? '226px' : '0'}` }}>
         {open &&

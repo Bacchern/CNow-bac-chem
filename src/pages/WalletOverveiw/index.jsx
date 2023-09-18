@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./style.scss"
 import ImgCnow from "@src/assets/img/ImgCnow.png"
 import ImgACT from "@src/assets/img/ImgACT.png"
@@ -16,6 +16,7 @@ import thaydoi from "@src/assets/img/Wallet/Swapcoin.png"
 import Doiava from "@src/assets/img/Wallet/Swapava.png"
 import total from "@src/assets/img/Wallet/total.png"
 import Bieudo from "@src/assets/img/Wallet/Bieudo.png"
+import axios from "axios"
 
 
 
@@ -135,6 +136,18 @@ const ListData = [
 ]
 
 export default function WalletOverveiw() {
+
+    const [apiWallet, setApiWallet] = useState("")
+
+    const getApiWallet = async () => {
+        const res = await axios.get("https://api.theoverall.tech/api/wallet/v1/available-wallet")
+        setApiWallet(res.data.data)
+    }
+    console.log(apiWallet);
+    useEffect(() => {
+        getApiWallet()
+    },[])
+
     return (
         <div className="wallet" style={{ backgroundColor: "#F7F9FB" }}>
             <div className="container">

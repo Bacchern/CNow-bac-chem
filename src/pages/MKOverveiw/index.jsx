@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./style.scss"
 import Shape from "@src/assets/img/MKOverveiw/Shape.png"
 import Search from "@src/assets/img/MKOverveiw/Search.png"
@@ -19,32 +19,41 @@ import ChartOGN from "@src/assets/img/ChartOGN.png"
 import ChartUSDT from "@src/assets/img/ChartUSDT.png"
 import ChartXRP from "@src/assets/img/ChartXRP.png"
 import VectorBlack from "@src/assets/img/MKOverveiw/VectorBlack.png"
+import axios from "axios"
 
 
 const titleMK = [
     {
-        name: "Name",
+        name: "Assets",
         id: 1,
     },
     {
-        name: "Price",
+        name: "Last price",
         id: 2,
     },
     {
-        name: "24h Change",
+        name: "Change",
         id: 3,
     },
     {
-        name: "24h Volume",
+        name: "24H High",
         id: 4,
     },
     {
-        name: "Market Cap",
+        name: "24H Low",
         id: 5,
     },
     {
-        name: "Last 7 Days",
+        name: "24H Volume",
         id: 6,
+    },
+    {
+        name: "24H Top Tier",
+        id: 7,
+    },
+    {
+        name: "Chart",
+        id: 8,
     },
 ]
 
@@ -241,6 +250,19 @@ const datatitle = [
 
 
 export default function MKOverveiw() {
+
+    const [apiMK, setapiMK] = useState([])
+
+    const getApiMK = async () => {
+        const res = await axios.get('https://api.theoverall.tech/api/market/v1/list')
+        setapiMK(res.data.data)
+    }
+    useEffect(() => {
+        getApiMK()
+    }, [])
+    
+   
+
     return (
         <div className="Overveiw">
             <div className="container">
@@ -254,20 +276,22 @@ export default function MKOverveiw() {
                             </div>
                         </div>
                         <div className="listinfor">
-                            {datatitle.map((e) => {
+                            {apiMK.map((e) => {
                                 return (
                                     <div className="datainfor">
-                                        <div style={{ fontSize: "14px", fontWeight: "500" }}>{e.name}</div>
-                                        <div className="mapdatacoin">
-                                            {e.dataCoin.map((el) => {
-                                                return (
-                                                    <div className="datacoin">
-                                                        <img src={el.img} alt="" />
-                                                        <div>{el.dollar}</div>
-                                                        <div>{el.percent}</div>
-                                                    </div>
-                                                )
-                                            })}
+                                        <div style={{ fontSize: "14px", fontWeight: "500" }}>Normal Coin</div>
+                                        <div className="bannerdata">
+                                            <div className="titlecoin">
+                                                <div className="image"><img src={e.image} alt="" /></div>
+                                                <div>
+                                                    <div>{e.price.toFixed(3)}</div>
+                                                    <div>{e.symbol}</div>
+                                                </div>
+                                            </div>
+                                            <div className="contentcoin">
+                                                <div>{e.change.toFixed(3)}%</div>
+                                                <div><img src={e.trade} alt="" /></div>
+                                            </div>
                                         </div>
                                     </div>
                                 )
@@ -289,8 +313,8 @@ export default function MKOverveiw() {
                                 <div><img src={Search} alt="" /></div>
                             </div>
                         </div>
-                        <div className="table">
-                            <div className="table-title">
+                        <div className="tablee">
+                            <div className="tablee-title">
                                 {titleMK.map((e) => {
                                     return (
                                         <div>
@@ -299,22 +323,25 @@ export default function MKOverveiw() {
                                     )
                                 })}
                             </div>
-                            <div className="table-banner">
-                                {dataMK.map((e) => {
+                            <div className="tablee-banner">
+                                {apiMK.map((e) => {
                                     return (
                                         <div className="mapbanner">
-                                            <div><img src={e.img} alt="" /></div>
+                                            <div><img src={Shape} alt="" /></div>
                                             <div className="child">
                                                 <div className="logo">
-                                                    <div><img src={e.imgcoin} alt="" /></div>
-                                                    <div style={{fontSize:"16px", color:" #848484"}}>{e.name}</div>
+                                                    <img src={e.image} alt="" />
+                                                    <div>{e.symbol}</div>
+                                                    <div style={{ fontSize: "14px", color: " #848484" }}>{e.name}</div>
                                                 </div>
-                                                <div>{e.Price}</div>
-                                                <div>{e.Change}</div>
-                                                <div>{e.volume}</div>
-                                                <div>{e.MarketCap}</div>
+                                                <div>{e.price.toFixed(4)}</div>
+                                                <div>{e.change.toFixed(4)}%</div>
+                                                <div>{e.HIGH24HOUR.toFixed(4)}</div>
+                                                <div>{e.LOW24HOUR.toFixed(4)}</div>
+                                                <div>{e.TOTALVOLUME24H.toFixed(4)}</div>
+                                                <div>{e.TOTALTOPTIERVOLUME24HTO.toFixed(4)}</div>
                                                 <div>
-                                                    <img src={e.Chart} alt="" />
+                                                    <img src={e.trade} alt="" />
                                                 </div>
                                             </div>
                                         </div>

@@ -15,3 +15,9 @@ export const handleLogin = async (setToken, form) => {
 
 }
 
+export const handleLogout = async (setToken) =>{
+    // const res2 = await authServices.logout(data)
+    localStorage.removeItem('token')
+    setToken("")
+}
+

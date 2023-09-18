@@ -10,13 +10,13 @@ import { Outlet, useNavigate } from "react-router-dom"
 export default function AuthLayout() {
     const { token} = useContext(Auth)
     
-  
+    console.log(token);
     const navigate = useNavigate()
     useEffect(() => {
         if (!token) {
             navigate('/login')
         }
-        else    navigate('/')
+        else   navigate('/home')
     }, [token])
 
  
