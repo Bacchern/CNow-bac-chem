@@ -1,10 +1,10 @@
-.swap{
-    &-main{
+.swap {
+    &-main {
         display: flex;
         justify-content: center;
         padding-top: 20px;
         padding-bottom: 20px;
-        .table{
+        .table {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -13,25 +13,25 @@
             padding: 20px;
             max-width: 624px;
             border-radius: 20px;
-            &-main{
+            &-main {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
                 align-items: center;
                 width: 100%;
-                &_title{
+                &_title {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                    .his{
+                    .his {
                         display: flex;
                         gap: 10px;
                         align-items: center;
                         @media (max-width: 500px) {
                             flex-direction: column-reverse;
                         }
-                        .tran{
+                        .tran {
                             display: flex;
                             font-size: 14px;
                             font-weight: 500;
@@ -41,12 +41,12 @@
                         }
                     }
                 }
-                &_content{
+                &_content {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
                     width: 100%;
-                    .wallet{
+                    .wallet {
                         display: flex;
                         align-items: center;
                         gap: 30px;
@@ -56,18 +56,18 @@
                         padding: 15px;
                         font-size: 16px;
                     }
-                    .BTC{
+                    .BTC {
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
-                        &-main{
+                        &-main {
                             display: flex;
                             justify-content: space-between;
-                            @media (max-width:680px) {
+                            @media (max-width: 680px) {
                                 gap: 20px;
                                 justify-content: none;
                             }
-                            &_input{
+                            &_input {
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
@@ -77,25 +77,27 @@
                                 max-width: 382px;
                                 width: 100%;
                                 font-size: 18px;
-                                :first-child{
+                                 :first-child {
                                     padding-left: 27px;
                                     @media (max-width: 500px) {
                                         padding-left: 15px;
                                     }
                                 }
-                                
-                                .max{
+                                >input {
+                                    outline: none;
+                                }
+                                .max {
                                     display: flex;
                                     border-radius: 100px;
-                                    background:  linear-gradient(265.56deg, #F5F5F5 -0.27%, #F5F5F5 -0.26%, #F5F5F5 98.59%);
+                                    background: linear-gradient(265.56deg, #F5F5F5 -0.27%, #F5F5F5 -0.26%, #F5F5F5 98.59%);
                                     padding: 5px 10px;
                                     font-weight: bold;
-                                    @media (max-width:500px) {
+                                    @media (max-width: 500px) {
                                         padding: 8px 20px;
                                     }
                                 }
                             }
-                            &_img{
+                            &_img {
                                 display: flex;
                                 align-items: center;
                                 gap: 10px;
@@ -106,10 +108,10 @@
                             }
                         }
                     }
-                    .imgswap{
+                    .imgswap {
                         display: flex;
                         justify-content: center;
-                        .swapswap{
+                        .swapswap {
                             display: flex;
                             background: linear-gradient(265.56deg, #246CF9 -0.27%, #848484 -0.26%, #232531 98.59%);
                             border-radius: 100px;
@@ -120,19 +122,19 @@
                             align-items: center;
                         }
                     }
-                    .USDT{
+                    .USDT {
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
-                        &-main{
+                        &-main {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
                             font-size: 18px;
-                            @media (max-width:680px) {
+                            @media (max-width: 680px) {
                                 gap: 20px;
                             }
-                            &_num{
+                            &_num {
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
@@ -142,11 +144,14 @@
                                 max-width: 382px;
                                 width: 100%;
                                 font-size: 18px;
-                                @media (max-width:500px) {
+                                @media (max-width: 500px) {
                                     padding: 13px 20px;
                                 }
+                                >input {
+                                    outline: none;
+                                }
                             }
-                            &_img{
+                            &_img {
                                 display: flex;
                                 align-items: center;
                                 gap: 10px;
@@ -154,38 +159,38 @@
                                 border: 1px solid #DFDFDF;
                                 padding: 10px 20px;
                                 justify-content: center;
-                                @media (max-width:500px) {
+                                @media (max-width: 500px) {
                                     padding: 12px 32px;
                                 }
                             }
                         }
                     }
                 }
-                &_note{
+                &_note {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
-                    .rate{
+                    .rate {
                         display: flex;
                         flex-direction: column;
                         gap: 15px;
                         font-size: 16px;
-                        >div{
+                        >div {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            >div{
+                            >div {
                                 display: flex;
                                 gap: 10px;
                             }
                         }
                     }
-                    .Esti{
+                    .Esti {
                         display: flex;
                         flex-direction: column;
                         gap: 15px;
                         font-size: 16px;
-                        >div{
+                        >div {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
@@ -193,7 +198,7 @@
                     }
                 }
             }
-            &-button{
+            &-button {
                 display: flex;
                 border-radius: 100px;
                 background: red;
