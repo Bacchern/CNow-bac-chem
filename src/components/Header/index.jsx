@@ -243,12 +243,6 @@ export default function Header() {
   }
 
   const { token, onLogout } = useContext(Auth)
-  // console.log(token);
-  const path = {
-    Login: 'login',
-    SignUp: 'signup',
-  }
-
 
   return (
     <>
@@ -275,7 +269,7 @@ export default function Header() {
                     return (
 
                       <div className='MapMenu' key={i} >
-                        <NavLink to={e.link}><div style={{ fontSize: "14px", color: "white" }} >{e.name}</div></NavLink>
+                        <NavLink to={e.link} ><div style={{ fontSize: "14px", color: "white" }} >{e.name}</div></NavLink>
                         {e.isActive == true && <div className='imgMenu' onClick={() => onShow(e)}><img src={VectorDown} alt="" /></div> || ""}
                       </div>
                     )

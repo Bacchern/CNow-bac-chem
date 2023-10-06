@@ -1,34 +1,36 @@
-.Services{
-    &-main{
+.Services {
+    &-main {
         display: flex;
-        >div{
+        >div {
             flex: 1;
         }
         align-items: center;
+        width: 80%;
+        margin: auto;
         @media (max-width: 1000px) {
             flex-direction: column;
             align-items: center;
-            &_content{
-                .title{
+            &_content {
+                .title {
                     text-align: center;
                 }
             }
         }
-        &_content{
+        &_content {
             display: flex;
             flex-direction: column;
             gap: 60px;
             align-items: center;
-            .title{
+            .title {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
             }
-            .menu{
+            .menu {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                .bor{
+                .bor {
                     display: flex;
                     align-items: center;
                     gap: 10px;
@@ -40,7 +42,7 @@
                 }
             }
         }
-        &_img{
+        &_img {
             display: flex;
             justify-content: center;
             width: 100%;

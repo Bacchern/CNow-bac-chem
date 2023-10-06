@@ -261,7 +261,6 @@ export default function MKOverveiw() {
         getApiMK()
     }, [])
     
-   
 
     return (
         <div className="Overveiw">
@@ -278,7 +277,7 @@ export default function MKOverveiw() {
                         <div className="listinfor">
                             {apiMK.map((e) => {
                                 return (
-                                    <div className="datainfor">
+                                    <div className="datainfor" key={e.id} >
                                         <div style={{ fontSize: "14px", fontWeight: "500" }}>Normal Coin</div>
                                         <div className="bannerdata">
                                             <div className="titlecoin">
@@ -326,7 +325,7 @@ export default function MKOverveiw() {
                             <div className="tablee-banner">
                                 {apiMK.map((e) => {
                                     return (
-                                        <div className="mapbanner">
+                                        <div className="mapbanner" key={e.id}>
                                             <div><img src={Shape} alt="" /></div>
                                             <div className="child">
                                                 <div className="logo">
